@@ -4,6 +4,53 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+const translations = {
+    de: {
+        introHeader: "Hallo",
+        introText: "In der Welt der IT, wie im Wunderland, gibt es unzählige Türen zu entdecken, und als Frau habe ich den Mut, jede davon zu öffnen.",
+        whoAmIHeader: "Wer bin ich",
+        whoAmIText: "Hallo, ich bin Meral Karagül, zweifache Mutter und leidenschaftliche Entwicklerin, die mit 40 Jahren den Schritt in die IT-Branche gewagt hat.",
+        whatIDo: "Mit einer positiven Einstellung und dem Mut, mich immer wieder neuen Herausforderungen zu stellen, verfolge ich meine Ziele mit Entschlossenheit und Kreativität. Ich freue mich darauf, mein Wissen und meine Fähigkeiten in spannende Projekte einzubringen und stetig zu wachsen.",
+		experienceInIt:"Die Welt der Anwendungsentwicklung hat mich von Anfang an fasziniert, und seither habe ich mich auf verschiedene Programmiersprachen wie Java, Python, C++, PHP, HTML, CSS und JavaScript spezialisiert. Ich bin stets motiviert, Neues zu lernen und mich weiterzuentwickeln, um moderne und innovative Lösungen zu gestalten.",
+	},
+    en: {
+        introHeader: "Hello",
+        introText: "In the world of IT, like in Wonderland, there are countless doors to discover, and as a woman, I have the courage to open each one of them.",
+        whoAmIHeader: "Who am I",
+        whoAmIText: "Hello, I am Meral Karagül, a mother of two and a passionate developer who took the step into the IT industry at the age of 40.",
+        whatIDo: "With a positive attitude and the courage to constantly face new challenges, I pursue my goals with determination and creativity. I look forward to contributing my knowledge and skills to exciting projects and continuously growing.",
+		experienceInIt:"The world of application development has fascinated me from the very beginning, and since then, I have specialized in various programming languages such as Java, Python, C++, PHP, HTML, CSS, and JavaScript. I am always motivated to learn new things and continue to develop myself in order to create modern and innovative solutions.",
+	},
+    tr: {
+        introHeader: "Merhaba",
+        introText: "Bilişim dünyasında, tıpkı Harikalar Diyarı'ndaki gibi, keşfedilecek sayısız kapı var ve bir kadın olarak her birini açma cesaretine sahibim.",
+        whoAmIHeader: "Ben kimim",
+        whoAmIText: "Merhaba, ben Meral Karagül, iki çocuk annesi ve 40 yaşında bilişim sektörüne adım atan tutkulu bir geliştiriciyim.",
+        whatIDo: "Pozitif bir tutum ve sürekli yeni zorluklarla yüzleşme cesaretiyle, hedeflerimi kararlılık ve yaratıcılıkla takip ediyorum. Bilgimi ve yeteneklerimi heyecan verici projelere dahil etmeyi ve sürekli olarak büyümeyi dört gözle bekliyorum.",
+		experienceInIt:"Uygulama geliştirme dünyası beni en başından beri büyülemiştir ve o zamandan beri Java, Python, C++, PHP, HTML, CSS ve JavaScript gibi çeşitli programlama dillerinde uzmanlaştım. Modern ve yenilikçi çözümler oluşturmak için her zaman yeni şeyler öğrenmeye ve kendimi geliştirmeye motiveyim.",
+	}
+};
+
+function switchLanguage() {
+    const selectedLanguage = document.getElementById("languageSwitcher").value;
+    const content = translations[selectedLanguage];
+
+    // Aktualisiere die Inhalte
+    document.querySelector("#intro h2").textContent = content.introHeader;
+    document.querySelector("#intro p").textContent = content.introText;
+    document.querySelector("#one h2").textContent = content.whoAmIHeader;
+    document.querySelector("#one p").textContent = content.whoAmIText;
+	document.querySelector("#two h2").textContent = content.whatIDo;
+	document.querySelector("#work p").textContent = content.experienceInIt;
+
+
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    switchLanguage();
+});
+
+
 (function($) {
 
 	var	$window = $(window),
