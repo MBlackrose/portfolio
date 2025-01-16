@@ -17,10 +17,9 @@ const translations = {
         menuWhatIDo: "Was mache ich",
         menuExperience: "Erfahrung im IT",
         menuContact: "Kontakt",
-		
-	
-	
-	
+		contactMenu: "Sag Hallo",
+		contactInfo: "Schreib mir doch gerne eine Nachricht ich freue mich darauf, von dir zu hören! ",
+
 	},
     en: {
         introHeader: "Hello",
@@ -34,8 +33,9 @@ const translations = {
         menuWhatIDo: "What I do",
         menuExperience: "Experience in IT",
         menuContact: "Contact",
-	
-	
+		contactMenu:"Say Hello",
+		contactInfo:" Feel free to send me a message, I look forward to hearing from you!",
+
 	},
     tr: {
         introHeader: "Merhaba",
@@ -49,6 +49,8 @@ const translations = {
         menuWhatIDo: "Ne Yapıyorum",
         menuExperience: "BT'de Deneyim",
         menuContact: "İletişim",
+		contactMenu:"Bana Merhaba de",
+		contactInfo:"Bana bir mesaj yazmaktan çekinme, senden haber almayı sabırsızlıkla bekliyorum!",
 	}
 };
 
@@ -64,7 +66,9 @@ function switchLanguage() {
     document.querySelector("#one p").textContent = content.whoAmIText;
 	document.querySelector("#two h2").textContent = content.whatIDo;
 	document.querySelector("#work p").textContent = content.experienceInIt;
-
+	document.querySelector("#work h2").textContent = content.menuExperience;
+	document.querySelector("#contact h2").textContent = content.contactMenu;
+	document.querySelector("#contact p").textContent = content.contactInfo;
 
 	// Aktualisiere die Button-Texte
     document.querySelector('a[href="#intro"]').textContent = content.menuIntro;
