@@ -140,6 +140,19 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll("section[id]").forEach(function(sec) {
         sectionObserver.observe(sec);
     });
+
+    // 3D tilt effect on showcase cards
+    document.querySelectorAll(".sc-card").forEach(function(card) {
+        card.addEventListener("mousemove", function(e) {
+            var rect = card.getBoundingClientRect();
+            var x = (e.clientX - rect.left) / rect.width  - 0.5;
+            var y = (e.clientY - rect.top)  / rect.height - 0.5;
+            card.style.transform = "perspective(600px) rotateY(" + (x * 14) + "deg) rotateX(" + (-y * 10) + "deg) scale(1.02)";
+        });
+        card.addEventListener("mouseleave", function() {
+            card.style.transform = "perspective(600px) rotateY(0deg) rotateX(0deg) scale(1)";
+        });
+    });
 });
 
 // Mobile menu translations

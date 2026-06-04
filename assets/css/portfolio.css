@@ -1029,6 +1029,176 @@ section::before {
     margin: 0 !important;
 }
 
+/* ----- 3D Showcase ----- */
+.showcase-3d {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+}
+
+.sc-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: default;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.1s;
+    will-change: transform;
+}
+
+.sc-card:hover {
+    border-color: rgba(139, 92, 246, 0.45);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.sc-visual {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse at center, rgba(139,92,246,0.07) 0%, transparent 70%);
+    position: relative;
+    overflow: hidden;
+}
+
+.sc-info {
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.sc-tag {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent) !important;
+    -webkit-text-fill-color: var(--accent) !important;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.sc-title {
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    color: var(--text) !important;
+    -webkit-text-fill-color: var(--text) !important;
+    margin: 0 !important;
+}
+
+/* Rotating cube */
+.scene {
+    perspective: 400px;
+}
+
+.cube {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotateCube 10s linear infinite;
+}
+
+.cube-face {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 1.5px solid rgba(139, 92, 246, 0.65);
+    background: rgba(139, 92, 246, 0.04);
+}
+
+.face-front  { transform: rotateY(0deg)    translateZ(40px); }
+.face-back   { transform: rotateY(180deg)  translateZ(40px); }
+.face-left   { transform: rotateY(-90deg)  translateZ(40px); }
+.face-right  { transform: rotateY(90deg)   translateZ(40px); }
+.face-top    { transform: rotateX(90deg)   translateZ(40px); }
+.face-bottom { transform: rotateX(-90deg)  translateZ(40px); }
+
+@keyframes rotateCube {
+    0%   { transform: rotateX(0deg)   rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(540deg); }
+}
+
+/* Orbital rings */
+.rings-wrap {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ring {
+    position: absolute;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.ring-1 {
+    width: 110px;
+    height: 110px;
+    border-top-color: rgba(139, 92, 246, 0.8);
+    border-right-color: rgba(139, 92, 246, 0.2);
+    border-width: 1.5px;
+    animation: spinRing 3s linear infinite;
+}
+.ring-2 {
+    width: 78px;
+    height: 78px;
+    border-left-color: rgba(236, 72, 153, 0.8);
+    border-bottom-color: rgba(236, 72, 153, 0.2);
+    border-width: 1.5px;
+    animation: spinRing 2s linear infinite reverse;
+}
+.ring-3 {
+    width: 46px;
+    height: 46px;
+    border-top-color: rgba(139, 92, 246, 0.5);
+    border-right-color: rgba(236, 72, 153, 0.5);
+    border-width: 1.5px;
+    animation: spinRing 1.4s linear infinite;
+}
+.ring-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gradient);
+    box-shadow: 0 0 12px rgba(139, 92, 246, 0.8);
+    animation: pulseDot 2s ease-in-out infinite;
+}
+
+@keyframes spinRing {
+    to { transform: rotate(360deg); }
+}
+@keyframes pulseDot {
+    0%, 100% { transform: scale(1);   opacity: 1; }
+    50%       { transform: scale(1.5); opacity: 0.6; }
+}
+
+/* Dot-wave grid */
+.grid-wave {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 8px;
+}
+
+.gw-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(139, 92, 246, 0.7);
+    animation: waveDot 2.4s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.08s);
+}
+
+@keyframes waveDot {
+    0%, 100% { transform: translateY(0);    opacity: 0.35; background: rgba(139,92,246,0.7); }
+    50%       { transform: translateY(-10px); opacity: 1;    background: rgba(236,72,153,0.9); }
+}
+
 /* ----- GitHub Projects ----- */
 #projects {
     background: var(--bg-surface) !important;
@@ -1252,6 +1422,10 @@ section::before {
 
     .mission-card {
         padding: 2rem 1.75rem;
+    }
+
+    .showcase-3d {
+        grid-template-columns: 1fr;
     }
 
     .projects-grid {
