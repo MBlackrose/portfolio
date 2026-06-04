@@ -10,12 +10,12 @@ jobs:
     steps:
       - name: Pull latest code
         run: |
-          cd ~/Docker/repos/portfolio-meral
+          cd /home/github-runner/Docker/repos/portfolio-meral
           git pull origin main
 
       - name: Rebuild and restart container
         run: |
-          cd ~/Docker/repos/portfolio-meral
+          cd /home/github-runner/Docker/repos/portfolio-meral
           docker compose down
           docker compose up -d --build
 
