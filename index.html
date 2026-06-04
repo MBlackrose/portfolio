@@ -22,15 +22,31 @@
                 <li><a href="#mission" data-nav="menuWhatIDo">Was mache ich</a></li>
                 <li><a href="#skills" data-nav="menuExperience">IT Erfahrung</a></li>
                 <li><a href="#spaceboi">Spaceboi</a></li>
-                <li><a href="#contact" data-nav="menuContact">Kontakt</a></li>
+                <li><a href="#contact" class="nav-cta" data-nav="menuContact">Kontakt</a></li>
             </ul>
             <select id="languageSwitcher" onchange="switchLanguage()">
                 <option value="de">DE</option>
                 <option value="en">EN</option>
                 <option value="tr">TR</option>
             </select>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Menü öffnen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="nav-mobile" id="navMobile">
+        <ul>
+            <li><a href="#about" data-nav-mobile="menuWhoAmI">Wer bin ich</a></li>
+            <li><a href="#mission" data-nav-mobile="menuWhatIDo">Was mache ich</a></li>
+            <li><a href="#skills" data-nav-mobile="menuExperience">IT Erfahrung</a></li>
+            <li><a href="#spaceboi">Spaceboi</a></li>
+            <li><a href="#contact" class="nav-cta-mobile" data-nav-mobile="menuContact">Kontakt</a></li>
+        </ul>
+    </div>
 
     <!-- Hero -->
     <section id="hero">
