@@ -12,6 +12,9 @@ const translations = {
         menuWhatIDo: "Was mache ich",
         menuExperience: "IT Erfahrung",
         menuContact: "Kontakt",
+        menuProjects: "Projekte",
+        projectsTitle: "Meine Projekte",
+        projectsDesc: "Weitere Projekte auf GitHub — von Python-Anwendungen bis hin zu Web-Experimenten.",
         contactMenu: "Sag Hallo",
         contactInfo: "Schreib mir doch gerne eine Nachricht — ich freue mich darauf, von dir zu hören!",
     },
@@ -26,6 +29,9 @@ const translations = {
         menuWhatIDo: "What I do",
         menuExperience: "IT Experience",
         menuContact: "Contact",
+        menuProjects: "Projects",
+        projectsTitle: "My Projects",
+        projectsDesc: "More projects on GitHub — from Python applications to web experiments.",
         contactMenu: "Say Hello",
         contactInfo: "Feel free to send me a message — I look forward to hearing from you!",
     },
@@ -40,6 +46,9 @@ const translations = {
         menuWhatIDo: "Ne Yapıyorum",
         menuExperience: "BT Deneyimi",
         menuContact: "İletişim",
+        menuProjects: "Projeler",
+        projectsTitle: "Projelerim",
+        projectsDesc: "GitHub'daki diğer projeler — Python uygulamalarından web denemelerine kadar.",
         contactMenu: "Merhaba de",
         contactInfo: "Bana bir mesaj yazmaktan çekinme — senden haber almayı sabırsızlıkla bekliyorum!",
     }
@@ -56,6 +65,8 @@ function switchLanguage() {
     document.getElementById("missionText").textContent = t.whatIDo;
     document.getElementById("skillsTitle").textContent = t.menuExperience;
     document.getElementById("skillsDesc").textContent = t.experienceInIt;
+    document.getElementById("projectsTitle").textContent = t.projectsTitle;
+    document.getElementById("projectsDesc").textContent = t.projectsDesc;
     document.getElementById("contactTitle").textContent = t.contactMenu;
     document.getElementById("contactDesc").textContent = t.contactInfo;
 

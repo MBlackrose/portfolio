@@ -1029,6 +1029,116 @@ section::before {
     margin: 0 !important;
 }
 
+/* ----- GitHub Projects ----- */
+#projects {
+    background: var(--bg-surface) !important;
+}
+
+.projects-header {
+    margin-bottom: 2.5rem;
+}
+
+.projects-desc {
+    font-size: 1rem !important;
+    color: var(--text-dim) !important;
+    -webkit-text-fill-color: var(--text-dim) !important;
+    line-height: 1.8 !important;
+    max-width: 640px;
+    margin-bottom: 0 !important;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.repo-card {
+    display: flex !important;
+    flex-direction: column;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.repo-card:hover {
+    border-color: rgba(139, 92, 246, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+}
+
+.repo-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.repo-icon {
+    color: var(--text-muted) !important;
+    -webkit-text-fill-color: var(--text-muted) !important;
+    font-size: 1rem;
+}
+
+.repo-lang {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.repo-lang.python {
+    background: rgba(55, 118, 171, 0.15);
+    color: #5ba3d9 !important;
+    -webkit-text-fill-color: #5ba3d9 !important;
+    border: 1px solid rgba(55, 118, 171, 0.3);
+}
+
+.repo-lang.js {
+    background: rgba(247, 223, 30, 0.12);
+    color: #e5c912 !important;
+    -webkit-text-fill-color: #e5c912 !important;
+    border: 1px solid rgba(247, 223, 30, 0.25);
+}
+
+.repo-lang.scss {
+    background: rgba(205, 103, 153, 0.12);
+    color: #e07fb3 !important;
+    -webkit-text-fill-color: #e07fb3 !important;
+    border: 1px solid rgba(205, 103, 153, 0.25);
+}
+
+.repo-name {
+    font-size: 0.97rem !important;
+    font-weight: 700 !important;
+    color: var(--text) !important;
+    -webkit-text-fill-color: var(--text) !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.01em;
+}
+
+.repo-desc {
+    font-size: 0.82rem !important;
+    color: var(--text-dim) !important;
+    -webkit-text-fill-color: var(--text-dim) !important;
+    line-height: 1.65 !important;
+    margin: 0 !important;
+    flex: 1;
+}
+
+.projects-footer {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
 /* ----- Scroll animations ----- */
 .fade-up {
     opacity: 0;
@@ -1144,6 +1254,10 @@ section::before {
         padding: 2rem 1.75rem;
     }
 
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .nav-links {
         display: none !important;
     }
@@ -1172,6 +1286,10 @@ section::before {
 
     .contact-form-wrap {
         padding: 1.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 
     .hero-name {
