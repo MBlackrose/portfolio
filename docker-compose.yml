@@ -4,6 +4,6 @@ services:
   portfolio:
     build: .
     ports:
-      - "80:80"
+      - "33333:80"
     restart: unless-stopped
     container_name: portfolio-meral
