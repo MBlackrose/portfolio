@@ -7,16 +7,19 @@ on:
 jobs:
   deploy:
     runs-on: self-hosted
+    env:
+      HOME: /home/github-runner
+      REPO: /home/github-runner/Docker/repos/portfolio-meral
     steps:
       - name: Pull latest code
         run: |
-          git config --global --add safe.directory /home/github-runner/Docker/repos/portfolio-meral
-          cd /home/github-runner/Docker/repos/portfolio-meral
+          git config --global --add safe.directory $REPO
+          cd $REPO
           git pull origin main
 
       - name: Rebuild and restart container
         run: |
-          cd /home/github-runner/Docker/repos/portfolio-meral
+          cd $REPO
           docker compose down
           docker compose up -d --build
 
