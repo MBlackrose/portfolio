@@ -14,7 +14,7 @@ Run the site locally with Docker:
 docker-compose up --build
 ```
 
-Access at `http://localhost:33333`. The container name is `portfolio-meral`.
+Access at `http://localhost:80`. The container name is `portfolio-meral`.
 
 To rebuild after changes:
 ```powershell

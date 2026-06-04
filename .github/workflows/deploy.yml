@@ -22,4 +22,4 @@ jobs:
       - name: Health check
         run: |
           sleep 5
-          curl -sf http://localhost:33333 && echo "OK" || echo "FAILED"
+          curl -sf http://localhost:80 && echo "OK" || echo "FAILED"
