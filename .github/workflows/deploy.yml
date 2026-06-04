@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: Pull latest code
         run: |
+          git config --global --add safe.directory /home/github-runner/Docker/repos/portfolio-meral
           cd /home/github-runner/Docker/repos/portfolio-meral
           git pull origin main
 
