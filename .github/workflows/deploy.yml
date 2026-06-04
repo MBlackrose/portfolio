@@ -1,28 +1,25 @@
-
-name: CI/CD
+name: Deploy Portfolio
 
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Build
-        run: docker compose build
-
   deploy:
     runs-on: [self-hosted, portfolio-meral]
-    needs: build
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     steps:
-      - name: Deploy
+      - name: Pull latest code
         run: |
           cd ~/Docker/repos/portfolio-meral
-          git pull
+          git pull origin main
+
+      - name: Rebuild and restart container
+        run: |
+          cd ~/Docker/repos/portfolio-meral
           docker compose down
           docker compose up -d --build
+
+      - name: Health check
+        run: |
+          sleep 5
+          curl -sf http://localhost:33333 && echo "OK" || echo "FAILED"
