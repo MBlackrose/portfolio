@@ -1,181 +1,215 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		
-		<title>Meral Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script src="assets/js/main.js" type="text/javascript" defer></script>
+<html lang="de">
+<head>
+    <title>Meral Karagül — Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/portfolio.css" />
+</head>
+<body>
 
-	</head>
-	<body class="is-preload">
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">Meral Karagül</a>
+            <ul class="nav-links">
+                <li><a href="#about" data-nav="menuWhoAmI">Wer bin ich</a></li>
+                <li><a href="#mission" data-nav="menuWhatIDo">Was mache ich</a></li>
+                <li><a href="#skills" data-nav="menuExperience">IT Erfahrung</a></li>
+                <li><a href="#spaceboi">Spaceboi</a></li>
+                <li><a href="#contact" data-nav="menuContact">Kontakt</a></li>
+            </ul>
+            <select id="languageSwitcher" onchange="switchLanguage()">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="tr">TR</option>
+            </select>
+        </div>
+    </nav>
 
-		<!-- Header -->
-			<header id="header">
-				<h1>Meral Karagül</h1>
-				<nav>
-					<ul>
-						<li><a href="#intro">Intro</a></li>
-						<li><a href="#one">Wer bin ich</a></li>
-						<li><a href="#two">Was mache ich</a></li>
-						<li><a href="#work">Erfahrung im IT</a></li>
-						<li><a href="#spaceboi">Spaceboi</a></li>
-						<li><a href="#contact">Kontakt</a></li>
-						<li>
-							<select id="languageSwitcher" onchange="switchLanguage()">
-								<option value="de">Deutsch</option>
-								<option value="en">Englisch</option>
-								<option value="tr">Türkisch</option>
-							</select>
-						</li>
-					</ul>
-					
-					
-				</nav>
-			</header>
+    <!-- Hero -->
+    <section id="hero">
+        <div class="hero-inner">
+            <div class="hero-text fade-up">
+                <p class="hero-greeting" id="heroGreeting">Hallo</p>
+                <h1 class="hero-name">Meral <span class="gradient-text">Karagül</span></h1>
+                <p class="hero-tagline" id="heroTagline">In der Welt der IT, wie im Wunderland, gibt es unzählige Türen zu entdecken, und als Frau habe ich den Mut, jede davon zu öffnen.</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">Mehr erfahren</a>
+                    <a href="#contact" class="btn btn-outline" data-nav="menuContact">Kontakt</a>
+                </div>
+            </div>
+            <div class="hero-image fade-up" style="transition-delay: 0.18s">
+                <div class="image-ring">
+                    <img src="Meral.jpg" alt="Meral Karagül" />
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<!-- Intro -->
-			<section id="intro" class="main style1 dark fullscreen">
-				<div class="content">
-					<header>
-						<h2>Hallo</h2>
-					</header>
-					<p> "In der Welt der IT, wie im Wunderland, gibt es unzählige Türen zu entdecken, und als Frau habe ich den Mut, jede davon zu öffnen."
-					
-					
-					<footer>
-						<a href="#one" class="button style2 down">More</a>
-					</footer>
-				</div>
-			</section>
+    <!-- About -->
+    <section id="about">
+        <div class="section-inner">
+            <div class="about-grid">
+                <div class="about-text fade-up">
+                    <p class="section-label">Über mich</p>
+                    <h2 class="section-title" id="aboutTitle">Wer bin ich</h2>
+                    <p id="aboutText">Hallo, ich bin Meral Karagül, zweifache Mutter und leidenschaftliche Entwicklerin, die mit 40 Jahren den Schritt in die IT-Branche gewagt hat.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card fade-up" style="transition-delay: 0.05s">
+                        <span class="stat-number">40</span>
+                        <p class="stat-label">Quereinsteigerin</p>
+                    </div>
+                    <div class="stat-card fade-up" style="transition-delay: 0.12s">
+                        <span class="stat-number">6+</span>
+                        <p class="stat-label">Technologien</p>
+                    </div>
+                    <div class="stat-card fade-up" style="transition-delay: 0.19s">
+                        <span class="stat-number">2</span>
+                        <p class="stat-label">Kinder</p>
+                    </div>
+                    <div class="stat-card fade-up" style="transition-delay: 0.26s">
+                        <span class="stat-number">∞</span>
+                        <p class="stat-label">Motivation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<!-- One -->
-			<section id="one" class="main style2 right dark fullscreen">
-				<div class="content box style2">
-					
-					<header>
-						<h2>Wer bin ich </h2>
-					</header>
-					<p> Hallo, ich bin Meral Karagül zweifache Mutter und leidenschaftliche Entwicklerin, 
-						die mit 40 Jahren den Schritt in die IT-Branche
-					 gewagt hat.</p>
-				</div>
-				<a href="#two" class="button style2 down anchored">Next</a>
-			</section>
+    <!-- Mission -->
+    <section id="mission">
+        <div class="section-inner">
+            <p class="section-label fade-up">Meine Mission</p>
+            <div class="mission-card fade-up" style="transition-delay: 0.08s">
+                <p class="mission-quote" id="missionText">Mit einer positiven Einstellung und dem Mut, mich immer wieder neuen Herausforderungen zu stellen, verfolge ich meine Ziele mit Entschlossenheit und Kreativität. Ich freue mich darauf, mein Wissen und meine Fähigkeiten in spannende Projekte einzubringen und stetig zu wachsen.</p>
+            </div>
+        </div>
+    </section>
 
-		<!-- Two -->
-			<section id="two" class="main style2 left dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2>Mit einer positiven Einstellung und dem Mut, 
-							mich immer wieder neuen Herausforderungen zu stellen, verfolge ich meine Ziele mit Entschlossenheit und Kreativität. 
-							Ich freue mich darauf, mein Wissen und meine Fähigkeiten in spannende Projekte einzubringen und stetig zu wachsen.</h2>
-					</header>
-					<p>
-				<a href="#work" class="button style2 down anchored">Next</a>
-			</section>
+    <!-- Skills / Experience -->
+    <section id="skills">
+        <div class="section-inner">
+            <div class="skills-header fade-up">
+                <p class="section-label">Kenntnisse</p>
+                <h2 class="section-title" id="skillsTitle">Erfahrung im IT</h2>
+                <p class="skills-desc" id="skillsDesc">Die Welt der Anwendungsentwicklung hat mich von Anfang an fasziniert, und seither habe ich mich auf verschiedene Programmiersprachen spezialisiert.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Git</span>
+                </div>
+            </div>
 
-		<!-- Work -->
-			<section id="work" class="main style3 primary">
-				<div class="content">
-					<header>
-						<h2>Erfahrung im IT </h2>
-						<p>Die Welt der Anwendungsentwicklung hat mich von Anfang an fasziniert, und seither habe ich mich auf verschiedene Programmiersprachen wie Java, Python, C++, PHP, HTML, CSS und JavaScript spezialisiert. 
-							Ich bin stets motiviert, Neues zu lernen und mich weiterzuentwickeln, um moderne und innovative Lösungen zu gestalten. </p>
-					</header>
+            <!-- Gallery -->
+            <div class="gallery fade-up" style="transition-delay: 0.1s">
+                <article class="from-left">
+                    <a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a>
+                </article>
+                <article class="from-right">
+                    <a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" /></a>
+                </article>
+                <article class="from-left">
+                    <a href="images/fulls/03.jpg" class="image fit"><img src="images/thumbs/03.jpg" title="Air Lounge" alt="" /></a>
+                </article>
+                <article class="from-right">
+                    <a href="images/fulls/04.jpg" class="image fit"><img src="images/thumbs/04.jpg" title="Carry on" alt="" /></a>
+                </article>
+                <article class="from-left">
+                    <a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" /></a>
+                </article>
+                <article class="from-right">
+                    <a href="images/fulls/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" title="Bent IX" alt="" /></a>
+                </article>
+            </div>
+        </div>
+    </section>
 
-					<!-- Gallery  -->
-						<div class="gallery">
-							<article class="from-left">
-								<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" /></a>
-							</article>
-							<article class="from-left">
-								<a href="images/fulls/03.jpg" class="image fit"><img src="images/thumbs/03.jpg" title="Air Lounge" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/04.jpg" class="image fit"><img src="images/thumbs/04.jpg" title="Carry on" alt="" /></a>
-							</article>
-							<article class="from-left">
-								<a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" title="Bent IX" alt="" /></a>
-							</article>
-						</div>
+    <!-- Spaceboi Project -->
+    <section id="spaceboi">
+        <div class="section-inner">
+            <div class="project-card fade-up">
+                <div class="project-info">
+                    <p class="project-badge">
+                        <span class="badge-dot"></span>
+                        Projekt
+                    </p>
+                    <h2 class="project-title">Spaceboi</h2>
+                    <p class="project-desc">Spaceboi ist ein interaktives Space-Shooter-Spiel. Das Spiel kombiniert grafische Animationen, Sound-Effekte und Spielmechaniken wie Bewegungssteuerung, Schusslogik, Asteroiden-Physik und Kollisionserkennung.</p>
+                    <div class="project-meta">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pygame</span>
+                        <span class="tech-tag">Canvas API</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <a href="spaceboi-game/game.html" class="btn btn-primary">Spiel spielen →</a>
+                </div>
+                <div class="project-visual">
+                    <div class="game-preview">🚀</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				</div>
-			</section>
+    <!-- Contact -->
+    <section id="contact">
+        <div class="section-inner">
+            <div class="contact-grid">
+                <div class="contact-info fade-up">
+                    <p class="section-label">Kontakt</p>
+                    <h2 id="contactTitle">Sag Hallo</h2>
+                    <p id="contactDesc">Schreib mir doch gerne eine Nachricht — ich freue mich darauf, von dir zu hören!</p>
+                </div>
+                <div class="contact-form-wrap fade-up" style="transition-delay: 0.1s">
+                    <form method="post" action="https://formspree.io/f/xqakkqbj">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label>Name</label>
+                                <input required type="text" name="name" placeholder="Dein Name" />
+                            </div>
+                            <div class="form-field">
+                                <label>Email</label>
+                                <input required type="email" name="email" placeholder="deine@email.de" />
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label>Nachricht</label>
+                            <textarea required name="message" placeholder="Deine Nachricht..." rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Nachricht senden</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<!-- Spaceboi Project -->
-			<section id="spaceboi" class="main style2 right dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2>Spaceboi Projekt</h2>
-					</header>
-					<p>Spaceboi ist ein interaktives Space-Shooter-Spiel, das mit <strong>Python und Pygame</strong> entwickelt wurde. Das Spiel kombiniert grafische Animationen, Sound-Effekte und Spielmechaniken wie Bewegungssteuerung, Schusslogik, Asteroiden-Physik und Kollisionserkennung.
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-inner">
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/meral.karagul3" aria-label="Facebook"><i class="icon brands fa-facebook-f"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/meral-karag%C3%BCl-32ba6230a/" aria-label="LinkedIn"><i class="icon brands fa-linkedin-in"></i></a></li>
+            </ul>
+            <p class="footer-copy">&copy; 2025 Meral Karagül</p>
+        </div>
+    </footer>
 
-					<br><br><strong>Technologien:</strong> Python, Pygame, Vektorarithmetik, Delta-Time-Logik
-					<br><strong>Features:</strong> Spielersteuerung mit Maus, Laser-System mit Cooldown, Asteroiden-Spawning, Sounds & Musik
-					</p>
-					<a href="spaceboi-game/game.html" class="button style2">Play Game</a>
-				</div>
-				<a href="#contact" class="button style2 down anchored">Next</a>
-			</section>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/main.js"></script>
 
-			<!-- Contact -->
-			<section id="contact" class="main style3 secondary">
-				<div class="content">
-					<header>
-						<h2>Sag Hallo</h2>
-						<p>Schreib mir doch gerne eine Nachricht  ich freue mich darauf, von dir zu hören!</p>
-					</header>
-					<div class="box">
-						<form method="post" action="https://formspree.io/f/xqakkqbj">
-							<div class="fields">
-								<div class="field half"><input required type="text" name="name" placeholder="Name" /></div>
-								<div class="field half"><input required type="email" name="email" placeholder="Email" /></div>
-								<div class="field"><textarea required name="message" placeholder="Message" rows="6"></textarea></div>
-							</div>
-							<ul class="actions special">
-								<li><input type="submit" value="Send Message" /></li>
-							</ul>
-						</form>
-					</div>
-				</div>
-			</section>
-
-		<!-- Footer -->
-			<footer id="footer">
-
-				<!-- Icons -->
-					<ul class="icons">
-						<li><a href="https://www.facebook.com/meral.karagul3" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<!--<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
-						<li><a href="https://www.linkedin.com/in/meral-karag%C3%BCl-32ba6230a/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<!-- <li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li> -->
-					</ul>
-
-				<!-- Menu -->
-					<ul class="menu">
-						<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-					</ul>
-
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
